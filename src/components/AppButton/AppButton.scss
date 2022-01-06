@@ -1,0 +1,32 @@
+.button-main{
+    align-items: center;
+    background-color: #0A66C2;
+    border: 0;
+    color: #ffffff;
+    border-radius: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 20px;
+    overflow: hidden;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+
+  &:hover, &:focus{
+    background-color: #16437E;
+    color: #ffffff;
+  }
+  &:active{
+    background: #09223b;
+    color: rgb(255, 255, 255, .7);
+  }
+  &:disabled{
+    cursor: not-allowed;
+    background: rgba(0, 0, 0, .08);
+    color: rgba(0, 0, 0, .3);
+  }
+}

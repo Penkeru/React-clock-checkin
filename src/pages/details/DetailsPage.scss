@@ -1,0 +1,23 @@
+.details-container{
+    display: grid;
+    grid-template-columns: auto 155px;
+    grid-column-gap: 20px;
+
+
+    .actions-btns{
+        max-height: 30px;
+    }
+
+    .list-container{
+        ul{
+            margin: 0;
+            padding: 20px;
+        }
+        li{
+            margin-top: 10px;
+            &:first-child{
+                margin-top: 0px;
+            }
+        }
+    }
+}

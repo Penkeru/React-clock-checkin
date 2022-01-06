@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from './logo.svg'
+import './App.scss';
+import MainRoutes from './routes/MainRoutes';
+import { BrowserRouter as Router } from "react-router-dom"
+import React, { Component } from 'react';
+import { AppContext } from './context/AppContext';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      checkinList: [],
+      setCheckinList: this.setCheckinList,
+    }
+  }
+
+  setCheckinList = (checkinList) => {
+    this.setState({ checkinList });
+  };
+
+  render() {
+    return <div className="app-container">
+      <div className="app-header">
+        <div className="app-logo-container">
+          <img src={logo} className="app-logo" alt="logo" />
+        </div>
+        <div className="app-header-title">Clock Check Application</div>
+      </div>
+      <div className="app-content">
+        <AppContext.Provider value={this.state}>
+          <Router>
+            <MainRoutes />
+          </Router>
+        </AppContext.Provider>
+      </div>
     </div>
-  );
+  }
 }
-
 export default App;

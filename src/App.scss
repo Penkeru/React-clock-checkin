@@ -1,0 +1,49 @@
+.app-container {
+  display: grid;
+  grid-template-rows: 80px auto;
+  width: 100%;
+  overflow: hidden;
+  min-height: 100vh;
+  grid-row-gap: 30px;
+}
+
+.app-header{
+  background-color: #282c34;
+  display: grid;
+  grid-template-columns: 80px auto;
+  align-items: center;
+  border-bottom: 1px solid gray;
+  
+  .app-logo-container {
+    width: 80px;
+    pointer-events: none;
+  }
+
+  .app-header-title{
+    font-size: 26px;
+    color:#008CBA;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.app-content{
+  padding: 20px;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .app-logo {
+    animation: App-logo-spin infinite 10s linear;
+  }
+}
